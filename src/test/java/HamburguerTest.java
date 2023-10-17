@@ -14,14 +14,28 @@ public class HamburguerTest {
     public void testHamburguerComQueijo() {
         QueijoHamburguer hamburguerSimples = new QueijoHamburguer(new HamburguerSimples());
         assertEquals(hamburguerSimples.descricao(), "Hamburguer Simples, Queijo");
-        assertEquals(hamburguerSimples.preco(), 6.0);
+        assertEquals(hamburguerSimples.preco(), 15.0);
     }
 
     @Test
     public void testHamburguerComBacon() {
         BaconHamburguer hamburguerSimples = new BaconHamburguer(new HamburguerSimples());
         assertEquals(hamburguerSimples.descricao(), "Hamburguer Simples, Bacon");
-        assertEquals(hamburguerSimples.preco(), 7.0);
+        assertEquals(hamburguerSimples.preco(), 13.0);
+    }
+
+    @Test
+    public void testHamburguerComQueijoComBaconComPaoHamburguerComum(){
+        PaoHamburguerComum hamburguerSimples = new PaoHamburguerComum(new QueijoHamburguer(new BaconHamburguer(new HamburguerSimples())));
+        assertEquals(hamburguerSimples.descricao(),"Hamburguer Simples, Bacon, Queijo, Pão Comum");
+        assertEquals(hamburguerSimples.preco(),34.5);
+    }
+
+    @Test
+    public void testHamburguerComQueijoComPaoHamburguerIntegral(){
+        PaoHamburguerIntegral hamburguerSimples = new PaoHamburguerIntegral(new QueijoHamburguer(new BaconHamburguer(new HamburguerSimples())));
+        assertEquals(hamburguerSimples.descricao(),"Hamburguer Simples, Bacon, Queijo, Pão Integral");
+        assertEquals(hamburguerSimples.preco(),34.0);
     }
 
 }

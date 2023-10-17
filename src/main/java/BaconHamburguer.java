@@ -10,6 +10,6 @@ public class BaconHamburguer extends PersonalizacaoDecorator {
 
     @Override
     public double preco() {
-        return hamburguerPersonalizado.preco() + 2.0;
+        return hamburguerPersonalizado.preco() + 8.0;
     }
 }

@@ -4,7 +4,7 @@ public class HamburguerSimples implements HamburguerPersonalizado {
 
     public HamburguerSimples() {
         this.descricao = "Hamburguer Simples";
-        this.precoBase = 5.0;
+        this.precoBase = 15.0;
     }
 
     @Override
